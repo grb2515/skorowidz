@@ -1,0 +1,26 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+<div class="form-froup row" style="width: 60%;">
+
+    <label class="col-sm-3 col-form-label">Tytuł filmu</label>
+    <div class="col-sm-9">
+        <input type="text" class="form-control" [(ngModel)]="MovieName"
+        placeholder="Wpisz tytuł filmu">
+    </div>
+
+    <label class="col-sm-3 col-form-label">Rodzaj filmu</label>
+    <div class="col-sm-9">
+        <input type="text" class="form-control" [(ngModel)]="MovieType"
+        placeholder="Wpisz rodzaj filmu">
+    </div>
+
+</div>
+
+</div>
+
+<button (click)="addMovie()" *ngIf="movie.MovieId==0" class="btn btn-primary">
+    Dodaj
+</button>
+
+<button (click)="updateMovie()" *ngIf="movie.MovieId!=0" class="btn btn-primary">
+    Zapisz
+</button>
